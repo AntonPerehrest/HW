@@ -74,5 +74,6 @@
 
 s = 32423423
 print(f'ecfsfsf {s}')
+print(f'ecfsfsf {s}')
 
 
