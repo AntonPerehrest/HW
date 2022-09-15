@@ -116,5 +116,4 @@ print(num_ext(x,y))
 
 
 #new commit
-a = 4
-d = 4
+
