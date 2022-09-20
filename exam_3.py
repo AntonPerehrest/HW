@@ -1,15 +1,15 @@
 # 1 Рекурсия. Возведение числа x в степень y\
 
-def num_ext(x,y):
-    if y == 1:
-        return x
-    elif y == 0:
-        return 1
-    else:
-        return x*num_ext(x, y-1)
-x = int(input('num: '))
-y = int(input('extent: '))
-print(num_ext(x,y))
+# def num_ext(x,y):
+#     if y == 1:
+#         return x
+#     elif y == 0:
+#         return 1
+#     else:
+#         return x*num_ext(x, y-1)
+# x = int(input('num: '))
+# y = int(input('extent: '))
+# print(num_ext(x,y))
 
 
 # 2 Определить функцию, которая проверяет является ли строка, введенная пользователем, целым числом. Решение задачи сдать ссылкой на GitHub.
@@ -52,25 +52,38 @@ print(num_ext(x,y))
 # в котором будет инициализироваться private переменная maxprice,
 # а также методы изменения и вывода максимальной стоимости машины.
 
-# class Car:
-#     def __init__(self, maxprice):
-#         self.__maxprice = maxprice
-#
-#     def info(self):
-#         print(f'Car maxprice - {self.__maxprice}')
-#
-#     def set_cost(self, maxprice):
-#         self.__maxprice = maxprice
-#
-#
-#     def get_cost(self):
-#         return f'New cost - {self.__maxprice}'
-#
-# car = Car(10_000)
-# car.info()
-# car.set_cost(20_000)
-# print(car.get_cost())
+class Car:
+    def __init__(self, maxprice):
+        self.__maxprice = maxprice
 
+    def info(self):
+        print(f'Car maxprice - {self.__maxprice}')
+    #
+    # def set_cost(self, maxprice):
+    #     self.__maxprice = maxprice
+    #
+    #
+    # def get_cost(self):
+    #     return f'New cost - {self.__maxprice}'
+    @property
+    def price(self):
+       return f'New car price - {self.__maxprice}'
+
+    @price.setter
+    def price(self, maxprice):
+       self.__maxprice = maxprice
+
+
+car = Car(10_000)
+car.info()
+
+car.price = 20_000
+print(car.price)
+
+
+
+
+#          !!!!!!!!!!!!!!!!!!          посмотреть декораторы для setter and getter      !!!!!!!!!!!!!!!!!!!
 
 # 5 Создать класс Animal и определить в нем метод make_a_sound(). Метод должен вывоводить строку "Издает звук"
 # Cоздать классы Cat и Dog с методами scratch() и dig() соответственно.
@@ -117,4 +130,11 @@ print(num_ext(x,y))
 
 #new commit
 #new commit
+
+# list_of_keys = ['a', 'b', 'c', 'd']
+# list_of_incidents = ["собака погналась за голубем и потерялась", "собака попала под машину",
+#                              "собака подралась с другой собакой", "собака наелась из мусорки и отравилась"]
+# all = dict(zip(list_of_keys, list_of_incidents))
+#
+# print(all['a'])
 
