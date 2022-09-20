@@ -76,6 +76,7 @@ class Car:
 
 car = Car(10_000)
 car.info()
+
 car.price = 20_000
 print(car.price)
 
