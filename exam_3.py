@@ -58,13 +58,18 @@ class Car:
 
     def info(self):
         print(f'Car maxprice - {self.__maxprice}')
-    #
-    # def set_cost(self, maxprice):
-    #     self.__maxprice = maxprice
-    #
-    #
+
+
+#1
     # def get_cost(self):
     #     return f'New cost - {self.__maxprice}'
+    #
+    # def set_cost(self, new_price):
+    #     self.__maxprice = new_price
+    #
+    # cost = property(get_cost, set_cost)
+
+#2
     @property
     def price(self):
        return f'New car price - {self.__maxprice}'
@@ -79,6 +84,8 @@ car.info()
 
 car.price = 20_000
 print(car.price)
+
+
 
 
 
